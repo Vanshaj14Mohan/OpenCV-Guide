@@ -1,1 +1,6 @@
 In this section we will be discussing about some Basic functions used in OpenCv such as:
+: Reading Images & Video
+: Resizing and Rescaling Frames
+: Drawing Shapes & Putting Text
+: Image Transformations
+: Contour Detection
