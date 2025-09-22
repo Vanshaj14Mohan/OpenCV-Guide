@@ -1,0 +1,1 @@
+In this section we will be discussing about some Basic functions used in OpenCv such as:
