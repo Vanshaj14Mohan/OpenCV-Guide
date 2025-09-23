@@ -1,3 +1,5 @@
+# For Video Display
+
 import cv2
 
 capture = cv2.VideoCapture(r"Section One\SmallCat_Video.mp4")

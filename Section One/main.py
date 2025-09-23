@@ -1,3 +1,5 @@
+# For Image Display
+
 import cv2
 
 img = cv2.imread("Section One\Cat_image.jpg")
