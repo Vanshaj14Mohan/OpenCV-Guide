@@ -1,5 +1,6 @@
 # In this we will learn about how to resize and rescale frames using OpenCV
-
+# For this we will use cv2.resize() function
+# Starting from videos and then we will move to images and live videos
 import cv2
 
 def rescaleFrame(frame, scale = 0.75): # To 75% of the original size
@@ -15,14 +16,14 @@ capture = cv2.VideoCapture(r"Section One\SmallCat_Video.mp4")
 
 while True:
     isTrue, frame = capture.read()
-    
+
     if not isTrue: # If there are no frames left to read, then break
         break
 
-    frame_resized = rescaleFrame(frame)
+    frame_resized = rescaleFrame(frame, scale=0.3) # Rescaling to 40% of the original size
     cv2.imshow("Video", frame)
     cv2.imshow("Video Resized", frame_resized)
-    if cv2.waitKey(20) & 0xFF==ord("d"):
+    if cv2.waitKey(20) & 0xFF==ord("q"): # Press 'q' to quit
         break
 
 capture.release()
