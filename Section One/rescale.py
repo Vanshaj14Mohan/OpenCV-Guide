@@ -9,3 +9,21 @@ def rescaleFrame(frame, scale = 0.75): # To 75% of the original size
     dimensions = (width, height)
 
     return cv2.resize(frame, dimensions, interpolation=cv2.INTER_AREA)
+
+#For reading videos
+capture = cv2.VideoCapture(r"Section One\SmallCat_Video.mp4")
+
+while True:
+    isTrue, frame = capture.read()
+    
+    if not isTrue: # If there are no frames left to read, then break
+        break
+
+    frame_resized = rescaleFrame(frame)
+    cv2.imshow("Video", frame)
+    cv2.imshow("Video Resized", frame_resized)
+    if cv2.waitKey(20) & 0xFF==ord("d"):
+        break
+
+capture.release()
+cv2.destroyAllWindows()
