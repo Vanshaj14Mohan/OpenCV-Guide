@@ -11,6 +11,11 @@ def rescaleFrame(frame, scale = 0.75): # To 75% of the original size
 
     return cv2.resize(frame, dimensions, interpolation=cv2.INTER_AREA)
 
+def Changeres(width,height):
+    # This function is for live videos
+    capture.set(3, width) # 3 is for width
+    capture.set(4, height) # 4 is for height
+
 #For reading videos
 capture = cv2.VideoCapture(r"Section One\SmallCat_Video.mp4")
 

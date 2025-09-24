@@ -4,6 +4,7 @@ import cv2
 img = cv2.imread("Section One\Cat_image.jpg")
 cv2.imshow("Cat", img)
 
+# This function will work for images, videos and live videos
 def rescaleFrame(frame, scale = 0.75): # To 75% of the original size
     # This function is for rescaling images, videos and live videos
     width = int( frame.shape[1] * scale)
