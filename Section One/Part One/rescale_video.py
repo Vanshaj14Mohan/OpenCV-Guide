@@ -17,7 +17,7 @@ def Changeres(width,height):
     capture.set(4, height) # 4 is for height
 
 #For reading videos
-capture = cv2.VideoCapture(r"Section One\SmallCat_Video.mp4")
+capture = cv2.VideoCapture(r"Section One\Part One\SmallCat_Video.mp4")
 
 while True:
     isTrue, frame = capture.read()

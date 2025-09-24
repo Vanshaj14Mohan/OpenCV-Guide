@@ -1,7 +1,7 @@
 # In this we will learn about how to resize and rescale images using OpenCV
 import cv2
 
-img = cv2.imread("Section One\Cat_image.jpg")
+img = cv2.imread("Section One\Part One\Cat_image.jpg")
 cv2.imshow("Cat", img)
 
 # This function will work for images, videos and live videos
