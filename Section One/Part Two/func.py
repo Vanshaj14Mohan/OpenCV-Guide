@@ -13,5 +13,18 @@ cv2.imshow("Gray Image", gray)
 blur = cv2.GaussianBlur(img, (7,7), cv2.BORDER_DEFAULT)
 cv2.imshow("Blur Image", blur)
 
+#3: Creating an edge cascade
+canny = cv2.Canny(img, 125, 175)
+cv2.imshow("Canny Image", canny)
+
+#4: Dilating the image using specific structuring element(ie using Canny image)
+dilated = cv2.dilate(canny, (7,7), iterations = 3)
+cv2.imshow("Dilated Image", dilated)
+
+#5: Eroding the image using specific structuring element(ie using Dilated image)
+eroded = cv2.erode(dilated, (5,5), iterations=3)
+cv2.imshow("Eroded Image", eroded)
+
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
