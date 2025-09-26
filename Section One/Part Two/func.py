@@ -25,6 +25,14 @@ cv2.imshow("Dilated Image", dilated)
 eroded = cv2.erode(dilated, (5,5), iterations=3)
 cv2.imshow("Eroded Image", eroded)
 
+#6: Resizing the image
+resized = cv2.resize(img, (500, 500), interpolation=cv2.INTER_CUBIC)
+cv2.imshow("Resized Image", resized)
+
+#7: Cropping the image
+cropped = img[0:400, 0:500]
+cv2.imshow("Cropped Image", cropped)
+
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
