@@ -1,0 +1,1 @@
+# So in this section we are gonna cover basic transformations of images.
