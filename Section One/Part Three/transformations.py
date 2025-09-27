@@ -19,8 +19,30 @@ def translate(img, x, y): # x is for shifting along X axis and y is for shifting
 # -x --> Left 
 # -y --> Up
 
-translated = translate(img, 100, 100)
+translated = translate(img, 100, -100)
 cv2.imshow("Translated Image", translated)
+
+# 2: Rotation of image
+def rotate(img, angle, rotPoint=None):
+    (height,width) = img.shape[:2]
+    if rotPoint is None:
+        rotPoint = (width//2, height//2) # center of the image
+
+    rotPoint = cv2.getRotationMatrix2D(rotPoint, angle, 1.0) # 1.0 is for scale
+    dimensions = (width, height)
+
+    return cv2.warpAffine(img, rotPoint, dimensions)
+
+rotated = rotate(img, 90) # -ve angle for clockwise rotation, +ve for anti-clockwise
+cv2.imshow("Rotated Image", rotated)
+
+#     rotPoint = (int(rotPoint[0]), int(rotPoint[1]))
+#     rotMat = cv2.getRotationMatrix2D(rotPoint, angle, 1.0) # 1.0 is for scale
+#     dimensions = (width, height)
+#     return cv2.warpAffine(img, rotMat, dimensions)
+
+# rotated = rotate(img, -45) # -ve angle for clockwise rotation
+# cv2.imshow("Rotated Image", rotated)
 
 
 cv2.waitKey(0)
