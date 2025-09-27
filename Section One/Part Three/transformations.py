@@ -36,13 +36,11 @@ def rotate(img, angle, rotPoint=None):
 rotated = rotate(img, 90) # -ve angle for clockwise rotation, +ve for anti-clockwise
 cv2.imshow("Rotated Image", rotated)
 
-#     rotPoint = (int(rotPoint[0]), int(rotPoint[1]))
-#     rotMat = cv2.getRotationMatrix2D(rotPoint, angle, 1.0) # 1.0 is for scale
-#     dimensions = (width, height)
-#     return cv2.warpAffine(img, rotMat, dimensions)
+# We can also rotate an already rotated image
+# rotated_again = rotate(rotated, -90)
+# cv2.imshow("Rotated Again Image", rotated_again)
 
-# rotated = rotate(img, -45) # -ve angle for clockwise rotation
-# cv2.imshow("Rotated Image", rotated)
+# 3: Resizing the image
 
 
 cv2.waitKey(0)
