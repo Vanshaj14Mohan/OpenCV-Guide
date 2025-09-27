@@ -33,6 +33,5 @@ cv2.imshow("Resized Image", resized)
 cropped = img[0:400, 0:500]
 cv2.imshow("Cropped Image", cropped)
 
-
 cv2.waitKey(0)
 cv2.destroyAllWindows()
