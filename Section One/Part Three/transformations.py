@@ -49,5 +49,9 @@ cv2.imshow("Resized Image", resized)
 flip = cv2.flip(img, 1) # 0 for vertical, 1 for horizontal, -1 for both this is basically flip code
 cv2.imshow("Flipped Image", flip)
 
+# 5: Cropping the image
+cropped_img = img[200:400, 300:500] # img[y1:y2, x1:x2]
+cv2.imshow("Cropped Image", cropped_img)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
