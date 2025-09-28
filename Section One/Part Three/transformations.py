@@ -5,7 +5,7 @@ import numpy as np
 
 img = cv2.imread("Section One\Part Three\Cat_image.jpg")
 
-cv2.imshow("Cat Image", img)
+cv2.imshow("Original Cat Image", img)
 
 # 1: Translation means basically means shifting the image along X and Y axis.
 def translate(img, x, y): # x is for shifting along X axis and y is for shifting along Y axis
@@ -41,7 +41,13 @@ cv2.imshow("Rotated Image", rotated)
 # cv2.imshow("Rotated Again Image", rotated_again)
 
 # 3: Resizing the image
+resized = cv2.resize(img, (500,500), interpolation=cv2.INTER_LINEAR) # (500,500) is the new size
+# interpolation can be INTER_AREA, INTER_CUBIC, INTER_LINEAR etc.
+cv2.imshow("Resized Image", resized)
 
+# 4: Flipping the image
+flip = cv2.flip(img, 1) # 0 for vertical, 1 for horizontal, -1 for both this is basically flip code
+cv2.imshow("Flipped Image", flip)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
