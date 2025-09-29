@@ -17,5 +17,15 @@ cv2.imshow("Gray Image", gray_img)
 canny = cv2.Canny(gray_img, 120, 170)
 cv2.imshow("Canny Edge Image", canny)
 
+# Finding Contours
+# By using, cv2.findContours() function takes three arguments, the first is the source image, 
+# the second is the contour retrieval mode, and the third is the contour approximation method.
+# It returns the contours and the hierarchy.
+
+contours, heirarchy = cv2.findContours(canny, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+print(f"{len(contours)} contours found!")
+# cv2.RETR_LIST retrieves all of the contours without establishing any hierarchical relationships.
+# cv2.CHAIN_APPROX_SIMPLE compresses horizontal, vertical, and diagonal segments and leaves only their end points.
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
