@@ -22,10 +22,11 @@ cv2.imshow("Canny Edge Image", canny)
 # the second is the contour retrieval mode, and the third is the contour approximation method.
 # It returns the contours and the hierarchy.
 
-contours, heirarchy = cv2.findContours(canny, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+contours, heirarchy = cv2.findContours(canny, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 print(f"{len(contours)} contours found!")
+# Contours is a Python list of all the contours in the image.
 # cv2.RETR_LIST retrieves all of the contours without establishing any hierarchical relationships.
-# cv2.CHAIN_APPROX_SIMPLE compresses horizontal, vertical, and diagonal segments and leaves only their end points.
+# cv2.CHAIN_APPROX_NONE stores all the contour points.
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
