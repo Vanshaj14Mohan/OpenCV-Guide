@@ -13,5 +13,9 @@ cv2.imshow("Original Image", img)
 gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow("Gray Image", gray_img)
 
+# Creating an edge cascade
+canny = cv2.Canny(gray_img, 120, 170)
+cv2.imshow("Canny Edge Image", canny)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
