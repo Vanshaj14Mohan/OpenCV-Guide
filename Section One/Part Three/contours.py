@@ -24,6 +24,7 @@ cv2.imshow("Canny Edge Image", canny)
 
 contours, heirarchy = cv2.findContours(canny, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 print(f"{len(contours)} contours found!")
+
 #----------------------------------
 # cv2.RETR_LIST --> retrieves all of the contours without establishing any hierarchical relationships.
 # cv2.RETR_EXTERNAL --> retrieves only the extreme outer contours.
@@ -31,6 +32,7 @@ print(f"{len(contours)} contours found!")
 # cv2.CHAIN_APPROX_NONE --> stores all the contour points (ie all the boundary points).
 # cv2.CHAIN_APPROX_SIMPLE --> removes all redundant points and compresses the contour, thereby saving memory.
 #----------------------------------
+
 # Contours is a Python list of all the contours in the image.
 # Each individual contour is a Numpy array of (x,y) coordinates of boundary points of the object.
 # Heirarchy contains information about the image topology.
