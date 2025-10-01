@@ -17,12 +17,16 @@ cv2.imshow("Gray Image", gray_img)
 canny = cv2.Canny(gray_img, 120, 170)
 cv2.imshow("Canny Edge Image", canny)
 
+# Making it blur to reduce noise
+blur = cv2.GaussianBlur(canny, (5,5), cv2.BORDER_DEFAULT)
+cv2.imshow("Blurred Image", blur)
+
 # Finding Contours
 # By using, cv2.findContours() function takes three arguments, the first is the source image, 
 # the second is the contour retrieval mode, and the third is the contour approximation method.
 # It returns the contours and the hierarchy.
 
-contours, heirarchy = cv2.findContours(canny, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
+contours, heirarchy = cv2.findContours(blur, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 print(f"{len(contours)} contours found!")
 
 #----------------------------------
