@@ -1,0 +1,9 @@
+In this section we will be discussing about some advanced topics that exist in OpenCv such as:
+: Color Spaces
+: Color Channels
+: Blurring
+: BITWISE operations
+: Masking
+: Histogram Computation
+: Thresholding/Binarizing Images
+: Edge Detection
