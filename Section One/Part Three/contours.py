@@ -18,12 +18,12 @@ gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow("Gray Image", gray_img)
 
 # Blurring the image
-# blur = cv2.GaussianBlur(img, (7,7), cv2.BORDER_DEFAULT)
-# cv2.imshow("Blur Image", blur)
+blur = cv2.GaussianBlur(gray_img, (7,7), cv2.BORDER_DEFAULT)
+cv2.imshow("Blur Image", blur)
 
 # # Creating an edge cascade
-# canny = cv2.Canny(img, 120, 170) # Passing blurred image to canny would give better results. Can try that too..
-# cv2.imshow("Canny Edge Image", canny) 
+canny = cv2.Canny(img, 120, 170) # Passing blurred image to canny would give better results. Can try that too..
+cv2.imshow("Canny Edge Image", canny) 
 
 #Another way to get contours we can use another function called threshold 
 ret, thresh = cv2.threshold(gray_img, 125,255, cv2.THRESH_BINARY)
