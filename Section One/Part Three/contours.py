@@ -14,12 +14,12 @@ gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow("Gray Image", gray_img)
 
 # Blurring the image
-blur = cv2.GaussianBlur(gray_img, (7,7), cv2.BORDER_DEFAULT)
+blur = cv2.GaussianBlur(img, (7,7), cv2.BORDER_DEFAULT)
 cv2.imshow("Blur Image", blur)
 
 # Creating an edge cascade
-canny = cv2.Canny(blur, 120, 170)
-cv2.imshow("Canny Edge Image", canny)
+canny = cv2.Canny(img, 120, 170) # Passing blurred image to canny would give better results. Can try that too..
+cv2.imshow("Canny Edge Image", canny) 
 
 # Finding Contours
 # By using, cv2.findContours() function takes three arguments, the first is the source image, 
@@ -27,7 +27,7 @@ cv2.imshow("Canny Edge Image", canny)
 # It returns the contours and the hierarchy.
 
 contours, heirarchy = cv2.findContours(canny, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-print(f"{len(contours)} contours found!")
+print(f"{len(contours)} contours found!") # Passing canny image to find contours would reduce the number of contours found.
 
 #----------------------------------
 # cv2.RETR_LIST --> retrieves all of the contours without establishing any hierarchical relationships.
