@@ -10,6 +10,9 @@ img = cv2.imread("Section One\Part Three\Cat_image.jpg")
 
 cv2.imshow("Original Image", img)
 
+blank = np.zeros(img.shape, dtype="uint8") # Creating a blank image
+cv2.imshow("Blank Image", blank) # we will use this blank image to draw contours on it.
+
 # Convert to grayscale
 gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow("Gray Image", gray_img)
@@ -48,6 +51,9 @@ print(f"{len(contours)} contours found!") # Passing canny image to find contours
 # cv2.RETR_LIST retrieves all of the contours without establishing any hierarchical relationships.
 # cv2.CHAIN_APPROX_NONE stores all the contour points.
 #----------------------------------
+
+cv2.drawContours(blank, contours, -1, (0,255,0), 1) # Drawing all contours on the blank image. -1 means drawing all contours. We can also specify index of contour to draw that specific contour.
+cv2.imshow("Contours Drawn", blank)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
