@@ -9,7 +9,7 @@ cv2.imshow("Original Cat Image", img)
 
 # 1: Translation means basically means shifting the image along X and Y axis.
 def translate(img, x, y): # x is for shifting along X axis and y is for shifting along Y axis
-    transMat = np.float32([[1,0,x], [0,1,y]]) # Transformation Matrix
+    transMat = np.float32([[1,0,x], [0,1,y]]) # Transformation Matrix 
     dimensions = (img.shape[1], img.shape[0]) # width and height of the image
     return cv2.warpAffine(img, transMat, dimensions)
 
@@ -24,7 +24,7 @@ cv2.imshow("Translated Image", translated)
 
 # 2: Rotation of image
 def rotate(img, angle, rotPoint=None):
-    (height,width) = img.shape[:2]
+    (height,width) = img.shape[:2] 
     if rotPoint is None:
         rotPoint = (width//2, height//2) # center of the image
 
