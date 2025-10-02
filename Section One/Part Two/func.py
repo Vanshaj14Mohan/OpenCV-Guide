@@ -10,11 +10,11 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow("Gray Image", gray)
 
 #2: Blurring the image
-blur = cv2.GaussianBlur(img, (7,7), cv2.BORDER_DEFAULT)
+blur = cv2.GaussianBlur(img, (7,7), cv2.BORDER_DEFAULT) 
 cv2.imshow("Blur Image", blur)
 
 #3: Creating an edge cascade
-canny = cv2.Canny(img, 125, 175)
+canny = cv2.Canny(img, 125, 175) 
 cv2.imshow("Canny Image", canny)
 
 #4: Dilating the image using specific structuring element(ie using Canny image)
