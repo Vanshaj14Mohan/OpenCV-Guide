@@ -30,7 +30,6 @@ def rotate(img, angle, rotPoint=None):
 
     rotPoint = cv2.getRotationMatrix2D(rotPoint, angle, 1.0) # 1.0 is for scale
     dimensions = (width, height)
-
     return cv2.warpAffine(img, rotPoint, dimensions)
 
 rotated = rotate(img, 90) # -ve angle for clockwise rotation, +ve for anti-clockwise
