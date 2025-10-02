@@ -21,7 +21,6 @@ capture = cv2.VideoCapture(r"Section One\Part One\SmallCat_Video.mp4")
 
 while True:
     isTrue, frame = capture.read()
-
     if not isTrue: # If there are no frames left to read, then break
         break
 
