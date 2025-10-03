@@ -28,7 +28,7 @@ cv2.imshow("Circle", blank_image)
 cv2.line(blank_image, (100,100), (250, 400), (255, 255, 255), 3) # White Line
 cv2.imshow("White Line", blank_image)
 
-# 6: Putting Text on the Image
+# 6: Putting Text on the Image 
 cv2.putText(blank_image, "Computer Vision", (200,500), cv2.FONT_HERSHEY_COMPLEX, 1.0, (255,0,0), 2) # Blue Text
 cv2.imshow("Text on Image", blank_image)
 
