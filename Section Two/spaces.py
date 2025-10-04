@@ -14,6 +14,14 @@ cv2.imshow("Original Image", img)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow("Gray Image", gray)
 
+#2: BGR to HSV (Hue, Saturation, Value)
+hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+cv2.imshow("HSV Image", hsv)
+
+#3: BGR to LAB (Lightness, A channel, B channel) l*a*b
+lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+cv2.imshow("LAB Image", lab)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
