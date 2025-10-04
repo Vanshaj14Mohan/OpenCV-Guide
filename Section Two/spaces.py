@@ -5,7 +5,7 @@
 
 import cv2
 
-img = cv2.imread("Section Two\Cat_Image.jpg")
+img = cv2.imread("Section Two\BigCat_Image.jpg")
 
 cv2.imshow("Original Image", img)
 
