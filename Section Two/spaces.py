@@ -9,6 +9,11 @@ img = cv2.imread("Section Two\BigCat_Image.jpg")
 
 cv2.imshow("Original Image", img)
 
+# Converting the image to different color spaces
+#1: BGR to Grayscale
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+cv2.imshow("Gray Image", gray)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
