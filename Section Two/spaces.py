@@ -4,6 +4,7 @@
 # Each color space has its own advantages and disadvantages, and is used for different purposes in image processing and computer vision tasks.
 
 import cv2
+import matplotlib.pyplot as plt
 
 img = cv2.imread("Section Two\BigCat_Image.jpg")
 
@@ -25,6 +26,9 @@ cv2.imshow("LAB Image", lab)
 #4: BGR to RGB
 rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 cv2.imshow("RGB Image", rgb)
+
+plt.imshow(rgb) # Since plt.imshow() expects the image in RGB format, we pass the rgb image here
+plt.show() # Would give result in RGB format
 
 #5: BGR to YUV
 
