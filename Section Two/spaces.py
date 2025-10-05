@@ -30,7 +30,9 @@ cv2.imshow("RGB Image", rgb)
 plt.imshow(rgb) # Since plt.imshow() expects the image in RGB format, we pass the rgb image here
 plt.show() # Would give result in RGB format
 
-#5: BGR to YUV
+#5: BGR to YUV (Y channel, U channel, V channel)
+yuv = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
+cv2.imshow("YUV Image", yuv)
 
 
 cv2.waitKey(0)
