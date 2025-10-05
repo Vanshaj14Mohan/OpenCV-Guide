@@ -27,9 +27,6 @@ cv2.imshow("LAB Image", lab)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-#Note: OpenCV uses BGR color space by default, while many other libraries use RGB color space. 
-# So, when working with images in OpenCV, it's important to keep this in mind and convert between color spaces 
-# as needed.BGR to RGB
 
 
 
