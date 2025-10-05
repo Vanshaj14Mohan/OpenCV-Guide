@@ -22,8 +22,14 @@ cv2.imshow("HSV Image", hsv)
 lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
 cv2.imshow("LAB Image", lab)
 
+#4: 
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+#Note: OpenCV uses BGR color space by default, while many other libraries use RGB color space. 
+# So, when working with images in OpenCV, it's important to keep this in mind and convert between color spaces 
+# as needed.BGR to RGB
 
 
 
