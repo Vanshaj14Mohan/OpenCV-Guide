@@ -40,6 +40,14 @@ plt.show() # Would give result in RGB format
 yuv = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
 cv2.imshow("YUV Image", yuv)
 
+#6: HSV to BGR
+hsv_bgr = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
+cv2.imshow("HSV to BGR Image", hsv_bgr)
+
+#7: LAB to BGR
+lab_bgr = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
+cv2.imshow("LAB to BGR Image", lab_bgr)
+
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
