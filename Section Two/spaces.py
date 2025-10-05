@@ -22,7 +22,12 @@ cv2.imshow("HSV Image", hsv)
 lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
 cv2.imshow("LAB Image", lab)
 
-#4: 
+#4: BGR to RGB
+rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+cv2.imshow("RGB Image", rgb)
+
+#5: BGR to YUV
+
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
