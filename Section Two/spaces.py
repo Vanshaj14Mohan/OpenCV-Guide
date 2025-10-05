@@ -15,6 +15,12 @@ cv2.imshow("Original Image", img)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow("Gray Image", gray)
 
+#NOTE: When converting to grayscale, the resulting image has only one channel instead of three. 
+# This is because grayscale images represent intensity values, not color information.
+# And you cannot convert a grayscale image back to a color image without losing information.
+# Also you cannot convert a grayscale image to other color spaces like HSV, LAB, etc. directly.
+# You need to convert it back to BGR first, and then to the desired color space.
+
 #2: BGR to HSV (Hue, Saturation, Value)
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 cv2.imshow("HSV Image", hsv)
