@@ -49,6 +49,7 @@ lab_bgr = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
 cv2.imshow("LAB to BGR Image", lab_bgr)
 
 
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
