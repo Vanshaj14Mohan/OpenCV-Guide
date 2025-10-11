@@ -8,5 +8,18 @@ img = cv2.imread("Section Two\Part Two\BigCat_Image.jpg")
 
 cv2.imshow("Original Image", img)
 
+b,g,r = cv2.split(img) # Splitting the image into its BGR channels
+
+cv2.imshow("Blue Channel", b)
+cv2.imshow("Green Channel", g)
+cv2.imshow("Red Channel", r)
+
+# For shapes
+print(img.shape) # (height, width, channels)
+print(b.shape) # (height, width) --> single channel
+print(g.shape) # (height, width)
+print(r.shape) # (height, width)
+
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
