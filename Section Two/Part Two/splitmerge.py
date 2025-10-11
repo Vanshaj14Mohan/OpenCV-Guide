@@ -2,13 +2,23 @@
 # Splitting an image means separating the image into its individual color channels.
 # Merging an image means combining the individual color channels back into a single image.
 
-import cv2 
+import cv2
+import numpy as np
 
 img = cv2.imread("Section Two\Part Two\BigCat_Image.jpg")
+blank_img = np.zeros(img.shape[:2], dtype="uint8") # Creating a blank image with same height and width as the original image
 
 cv2.imshow("Original Image", img)
 
 b,g,r = cv2.split(img) # Splitting the image into its BGR channels
+
+blue = cv2.merge([b, blank_img, blank_img]) # Merging the blue channel with two blank channels to create a blue image
+green = cv2.merge([blank_img, g, blank_img]) # Merging the green channel with two blank channels to create a green image
+red = cv2.merge([blank_img, blank_img, r]) # Merging the red channel with two blank channels to create a red image
+
+# cv2.imshow("Blue Image", blue) # Displaying the blue image
+# cv2.imshow("Green Image", green) # Displaying the green image
+# cv2.imshow("Red Image", red) # Displaying the red image
 
 cv2.imshow("Blue Channel", b)
 cv2.imshow("Green Channel", g)
@@ -21,8 +31,9 @@ print(g.shape) # (height, width)
 print(r.shape) # (height, width)
 
 # For merging the channels back to form the original image
-merged = cv2.merge([b,g,r])
+merged = cv2.merge([b,g,r]) # Passing a list of channels to merge
 cv2.imshow("Merged Image", merged)
+
 
 
 cv2.waitKey(0)
