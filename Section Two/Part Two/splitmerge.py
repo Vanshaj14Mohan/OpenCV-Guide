@@ -20,6 +20,10 @@ print(b.shape) # (height, width) --> single channel
 print(g.shape) # (height, width)
 print(r.shape) # (height, width)
 
+# For merging the channels back to form the original image
+merged = cv2.merge([b,g,r])
+cv2.imshow("Merged Image", merged)
+
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
