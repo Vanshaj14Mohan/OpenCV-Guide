@@ -34,7 +34,5 @@ print(r.shape) # (height, width)
 merged = cv2.merge([b,g,r]) # Passing a list of channels to merge
 cv2.imshow("Merged Image", merged)
 
-
-
 cv2.waitKey(0)
 cv2.destroyAllWindows()
