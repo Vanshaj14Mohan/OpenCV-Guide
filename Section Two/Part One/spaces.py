@@ -6,7 +6,7 @@
 import cv2
 import matplotlib.pyplot as plt
 
-img = cv2.imread("Section Two\BigCat_Image.jpg")
+img = cv2.imread("Section Two\Part One\BigCat_Image.jpg")
 
 cv2.imshow("Original Image", img)
 
