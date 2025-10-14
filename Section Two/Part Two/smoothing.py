@@ -26,7 +26,11 @@ gaussian = cv2.GaussianBlur(img, (3,3), 0) # (3,3) is the kernel size, 0 is the 
 cv2.imshow("Gaussian Blurring", gaussian)
 
 #3: Median Blurring
+# Same as average blurring but instead of taking the average, it takes the median.
 # It takes the median of all the pixels under the kernel area and replaces the central element with this median.
+# Generally it tends to be more effective in reducing noise in any image as compared to Average and Gaussian method
+median = cv2.medianBlur(img, 3) # 3 is the kernel size, it should be odd and positive, only one value is needed 
+cv2.imshow("Median Blurring", median)
 
 
 
