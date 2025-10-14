@@ -22,7 +22,8 @@ cv2.imshow("Average Blurring", average)
 #2: Gaussian Blurring
 # It takes the weighted average of all the pixels under the kernel area and replaces the central element
 # with this weighted average. The weights are calculated using a Gaussian function.
-
+gaussian = cv2.GaussianBlur(img, (3,3), 0) # (3,3) is the kernel size, 0 is the standard deviation in X direction
+cv2.imshow("Gaussian Blurring", gaussian)
 
 
 cv2.waitKey(0)
