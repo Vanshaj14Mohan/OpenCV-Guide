@@ -1,5 +1,7 @@
 # In this part we are gonna understand different smoothing and blurring techniques using OpenCV.
 # Smoothing is used to reduce noise and improve the quality of an image.
+# Blurring is a type of smoothing that reduces the sharpness of an image.
+# There are different types of blurring techniques like average blurring, Gaussian blurring, median blurring, bilateral filtering etc.
 
 import cv2
 
