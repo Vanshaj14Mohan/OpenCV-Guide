@@ -13,6 +13,16 @@ cv2.imshow("Original Image", img)
 # It takes the average of all the pixels under the kernel area and replaces the central element with this average.
 average = cv2.blur(img, (3,3)) # (3,3) is the kernel size
 cv2.imshow("Average Blurring", average)
+# Note: The kernel size should be odd and positive. eg (3,3), (5,5), (7,7) etc.
+# A larger kernel size means more blurring.
+# A smaller kernel size means less blurring.
+# Average blurring is not very effective in removing noise.
+# It is better to use Gaussian blurring or median blurring for better results.
+
+#2: Gaussian Blurring
+# It takes the weighted average of all the pixels under the kernel area and replaces the central element
+# with this weighted average. The weights are calculated using a Gaussian function.
+
 
 
 cv2.waitKey(0)
