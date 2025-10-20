@@ -15,12 +15,28 @@ cv2.imshow("Rectangle", rectangle)
 cv2.imshow("Circle", circle)
 
 #bitwise AND, the output is white only where both images are white, else black and it returns a new image
+#Intersecting area of rectangle and circle
 bitwise_and = cv2.bitwise_and(rectangle, circle)
 cv2.imshow("Bitwise AND", bitwise_and)
 
 #bitwise OR, the output is white where at least one image is white, else black and it returns a new image
+# Intersection and non-intersecting area of rectangle and circle
 bitwise_or = cv2.bitwise_or(rectangle, circle)
 cv2.imshow("Bitwise OR", bitwise_or)
+
+#bitwise XOR, the output is white where only one image is white, else black and it returns a new image
+# Non-intersecting area of rectangle and circle
+bitwise_xor = cv2.bitwise_xor(rectangle, circle)
+cv2.imshow("Bitwise XOR", bitwise_xor)
+
+#bitwise NOT, inverts the image, white becomes black and black becomes white
+# Inverting the rectangle image
+bitwise_not = cv2.bitwise_not(rectangle)
+cv2.imshow("Bitwise NOT", bitwise_not)
+
+# For circle
+bitwise_not = cv2.bitwise_not(circle)
+cv2.imshow("Bitwise NOT Circle", bitwise_not)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
