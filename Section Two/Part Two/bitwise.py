@@ -14,5 +14,13 @@ circle = cv2.circle(blank.copy(), (200,200), 200, 255, -1) # white circle
 cv2.imshow("Rectangle", rectangle)
 cv2.imshow("Circle", circle)
 
+#bitwise AND, the output is white only where both images are white, else black and it returns a new image
+bitwise_and = cv2.bitwise_and(rectangle, circle)
+cv2.imshow("Bitwise AND", bitwise_and)
+
+#bitwise OR, the output is white where at least one image is white, else black and it returns a new image
+bitwise_or = cv2.bitwise_or(rectangle, circle)
+cv2.imshow("Bitwise OR", bitwise_or)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
