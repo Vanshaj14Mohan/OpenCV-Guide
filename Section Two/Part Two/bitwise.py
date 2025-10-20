@@ -2,3 +2,17 @@
 # Bitwise operations are used to manipulate binary images. Especially useful in masking operations.
 # At a very high level, these operations work on the binary representation of the pixel values. that is 0s and 1s.
 # There are four types of bitwise operations: AND, OR, NOT, XOR.
+import cv2
+import numpy as np
+
+# Creating binary images, 400x400 pixels and drawing a rectangle and a circle
+blank = np.zeros((400,400), dtype="uint8")
+
+rectangle = cv2.rectangle(blank.copy(), (40,40), (380,380), 255, -1) # white rectangle, -1 fills the shape
+circle = cv2.circle(blank.copy(), (200,200), 200, 255, -1) # white circle
+
+cv2.imshow("Rectangle", rectangle)
+cv2.imshow("Circle", circle)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
