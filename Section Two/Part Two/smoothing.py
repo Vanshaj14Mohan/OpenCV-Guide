@@ -7,7 +7,7 @@ import cv2
 
 img = cv2.imread("Section Two\Part Two\BigCat_Image.jpg")
 
-cv2.imshow("Original Image", img)
+# cv2.imshow("Original Image", img)
 
 #1: Average Blurring
 # It takes the average of all the pixels under the kernel area and replaces the central element with this average.
@@ -32,7 +32,11 @@ cv2.imshow("Gaussian Blurring", gaussian)
 median = cv2.medianBlur(img, 3) # 3 is the kernel size, it should be odd and positive, only one value is needed 
 cv2.imshow("Median Blurring", median)
 
-
+#4: Bilateral Filtering/Blurring
+# It is very effective in noise removal while keeping edges sharp. Sometimes used in advanced image processing.
+# It takes the weighted average of all the pixels under the kernel area and replaces the central element.
+bilateral = cv2.bilateralFilter(img, 10, 15, 15) # 10 is the diameter of each pixel neighborhood, 15 is sigmaColor, 15 is sigmaSpace
+cv2.imshow("Bilateral Blurring", bilateral) 
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
