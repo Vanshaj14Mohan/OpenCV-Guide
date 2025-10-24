@@ -1,8 +1,4 @@
-# In this part we will learn about histograms using OpenCV.
-# A histogram is a graphical representation of the distribution of pixel intensities in an image.
-# It shows how many pixels are present for each intensity value (0-255 for grayscale images).
-# We can use histograms to analyze the contrast, brightness, and intensity distribution of an image.
-# Can use it  for image equalization and thresholding.
+# Now computing color histogram for each channel (BGR)
 
 import cv2
 import numpy as np
@@ -36,9 +32,6 @@ plt.ylabel("Number of Pixels")
 plt.plot(gray_hist)
 plt.xlim([0,256])
 plt.show()
-
-# Now computing color histogram for each channel (BGR)
-
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
