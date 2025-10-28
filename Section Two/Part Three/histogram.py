@@ -37,8 +37,7 @@ plt.plot(gray_hist)
 plt.xlim([0,256])
 plt.show()
 
-# Now computing color histogram for each channel (BGR)
-
+# Now computing color histogram for each channel (BGR) 
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
