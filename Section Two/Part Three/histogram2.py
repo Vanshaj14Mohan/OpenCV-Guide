@@ -1,5 +1,4 @@
 # Now computing color histogram for each channel (BGR)
-
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -29,7 +28,6 @@ for i, col in enumerate(colors):
     plt.title("Color Histogram") 
     # plt.xlabel("Bins")
     # plt.ylabel("Number of Pixels")
-
 plt.show()
 
 cv2.waitKey(0)
