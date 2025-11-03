@@ -15,5 +15,9 @@ cv2.imshow("GrayScale Image", gray)
 threshold, thresh = cv2.threshold(gray, 140, 255, cv2.THRESH_BINARY) # Try changing the threshold value passed as parameter.
 cv2.imshow("Simple Threshold", thresh)
 
+# we can also create inverse threshold as well
+threshold, thresh_inv = cv2.threshold(gray, 150, 255, cv2.THRESH_BINARY_INV) # Binary Inverse
+cv2.imshow("Inverse Threshold", thresh_inv)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
