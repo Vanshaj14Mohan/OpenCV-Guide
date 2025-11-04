@@ -8,7 +8,7 @@ img = cv2.imread("Section Two\Part Three\BigCat_Image.jpg")
 
 cv2.imshow("Original Image", img)
 
-# Starting with simple thresholding, converting bgr into grayscale first
+# Starting with simple thresholding, converting bgr into grayscale first 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow("GrayScale Image", gray)
 
