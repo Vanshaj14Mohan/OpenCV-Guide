@@ -9,6 +9,8 @@ img = cv2.imread("Section Two\Part Three\BigCat_Image.jpg")
 cv2.imshow("Original Image", img)
 
 # Starting with simple thresholding, converting bgr into grayscale first 
+# So in simple thresholding, we have to set a fixed threshold value.
+# All the pixel values above that threshold value will be set to white(255) and all the pixel values below that threshold value will be set to black(0).
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow("GrayScale Image", gray)
 
