@@ -18,8 +18,9 @@ cv2.imshow("Simple Threshold", thresh)
 # Adaptive Thresholding
 # In simple thresholding we have to set a fixed threshold value, but in adaptive thresholding
 # the threshold value is calculated for smaller regions of the image. This helps in getting better results for images with varying illumination.
-adaptive_thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 3)
+adaptive_thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2) # we can also use cv2.ADAPTIVE_THRESH_GAUSSIAN_C instead of cv2.ADAPTIVE_THRESH_MEAN_C
 cv2.imshow("Adaptive Threshold", adaptive_thresh)
+# so in adaptive thresholding, 11 is the block size (size of the neighborhood area) and 3 is the constant subtracted from the mean.
 
 # we can also create inverse threshold as well
 threshold, thresh_inv = cv2.threshold(gray, 150, 255, cv2.THRESH_BINARY_INV) # Binary Inverse
