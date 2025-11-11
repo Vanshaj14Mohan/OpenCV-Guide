@@ -32,5 +32,9 @@ cv2.imshow("Combined Sobel", combinedSobel)
 canny = cv2.Canny(gray, 100, 150) # 100 and 150 are threshold values for edge detection
 cv2.imshow("Canny Edge Detector", canny)
 
+# Conclusion: 
+# Canny is generally better than Sobel and Laplacian as it uses multiple steps to detect edges and reduces noise effectively.
+# Sobel and Laplacian are simpler and faster but may not be as accurate as Canny.
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
