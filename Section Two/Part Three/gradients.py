@@ -20,6 +20,13 @@ cv2.imshow("Laplacian Gradient", lap) # Displaying Laplacian Gradient
 
 # Using Sobel Gradient
 # Sobel computes the gradient in both x and y directions separately and then we can combine them
+sobelX = cv2.Sobel(gray, cv2.CV_64F, 1, 0) # Gradient in X direction and 1 indicates we want first derivative and 0 indicates we don't want derivative in Y direction
+sobelY = cv2.Sobel(gray, cv2.CV_64F, 0, 1) # Gradient in Y direction and 0 indicates we don't want derivative in X direction and 1 indicates we want first derivative in Y direction
+combinedSobel = cv2.bitwise_or(sobelX, sobelY)
+
+cv2.imshow("SobelX", sobelX)
+cv2.imshow("SobelY", sobelY)
+cv2.imshow("Combined Sobel", combinedSobel)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
