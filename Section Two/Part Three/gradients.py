@@ -17,6 +17,7 @@ cv2.imshow("GrayScale Image", gray)
 laplacian = cv2.Laplacian(gray, cv2.CV_64F) # Using CV_64F to avoid overflow and negative values as Laplacian can produce negative values
 lap = np.uint8(np.absolute(laplacian)) # Converting back to uint8 as images are usually in this format
 cv2.imshow("Laplacian Gradient", lap) # Displaying Laplacian Gradient
+# cv2.CV_64F is a data type that can hold larger range of values including negative values, which is important for gradient calculations.
 
 # Using Sobel Gradient
 # Sobel computes the gradient in both x and y directions separately and then we can combine them
