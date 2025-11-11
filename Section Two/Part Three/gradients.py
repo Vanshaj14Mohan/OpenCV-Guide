@@ -35,6 +35,9 @@ cv2.imshow("Canny Edge Detector", canny)
 # Conclusion: 
 # Canny is generally better than Sobel and Laplacian as it uses multiple steps to detect edges and reduces noise effectively.
 # Sobel and Laplacian are simpler and faster but may not be as accurate as Canny.
+# They can be useful in real-time applications where speed is crucial.
+# However, for most applications, Canny is preferred for edge detection due to its accuracy.
+# That's it for gradients and edge detection in OpenCV!
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
