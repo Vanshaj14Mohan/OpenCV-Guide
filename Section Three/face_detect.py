@@ -3,7 +3,7 @@ import cv2
 
 # Load the pre-trained Haar Cascade classifier for face detection
 
-img = cv2.imread("Section Three\Photos\lady.jpg")
+img = cv2.imread("Section Three\Photos\group 2.jpg")
 
 cv2.imshow("Original Image", img)
 
