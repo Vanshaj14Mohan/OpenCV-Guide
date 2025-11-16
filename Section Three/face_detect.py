@@ -12,7 +12,7 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow("Gray Image", gray)
 
 # Creating the haar cascade
-haar_cascade = cv2.CascadeClassifier("Section Three\haar_face.xml") # Make sure the haar_face.xml file is in the same directory as this script
+haar_cascade = cv2.CascadeClassifier(r"E:\OpenCV Guide\Section Three\haar_face.xml") # Make sure the haar_face.xml file is in the same directory as this script
 # this will detect faces, CascadeClassifier is a class in cv2 which loads the xml file
 
 face_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5) # Detecting faces, detectMultiScale is a method in CascadeClassifier class
