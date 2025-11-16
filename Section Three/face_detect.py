@@ -11,5 +11,16 @@ cv2.imshow("Original Image", img)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow("Gray Image", gray)
 
+# Creating the haar cascade
+haar_cascade = cv2.CascadeClassifier("Section Three\haar_face.xml") # Make sure the haar_face.xml file is in the same directory as this script
+# this will detect faces, CascadeClassifier is a class in cv2 which loads the xml file
+
+face_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5) # Detecting faces, detectMultiScale is a method in CascadeClassifier class
+# Draw rectangle around the faces that is why face_rect is used in for loop
+#scaleFactor: Parameter specifying how much the image size is reduced at each image scale.
+#minNeighbors: Parameter specifying how many neighbors each candidate rectangle should have to retain it.
+
+print(f"Number of faces found = {len(face_rect)}")
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
