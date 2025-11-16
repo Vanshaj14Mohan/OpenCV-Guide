@@ -3,7 +3,7 @@ import cv2
 
 # Load the pre-trained Haar Cascade classifier for face detection
 
-img = cv2.imread("Section Three\Photos\girl.jpg")
+img = cv2.imread("Section Three\Photos\lady.jpg")
 
 cv2.imshow("Original Image", img)
 
@@ -21,6 +21,11 @@ face_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
 #minNeighbors: Parameter specifying how many neighbors each candidate rectangle should have to retain it.
 
 print(f"Number of faces found = {len(face_rect)}")
+
+for(x,y,w,h) in face_rect:
+    cv2.rectangle(img, (x,y), (x+w, y+h), (0,255,0), thickness=2)
+
+cv2.imshow("Detected Faces", img)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
