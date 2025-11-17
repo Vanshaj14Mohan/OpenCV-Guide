@@ -11,7 +11,7 @@ cv2.imshow("Original Image", img)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow("Gray Image", gray)
 
-# Creating the haar cascade
+# Creating the haar cascade object
 haar_cascade = cv2.CascadeClassifier(r"E:\OpenCV Guide\Section Three\haar_face.xml") # Make sure the haar_face.xml file is in the same directory as this script
 # this will detect faces, CascadeClassifier is a class in cv2 which loads the xml file
 
