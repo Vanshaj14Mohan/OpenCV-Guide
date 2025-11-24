@@ -31,8 +31,8 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 # Note: Haar Cascades are not the most accurate method for face detection,
-#  but they are fast and work well for simple applications. For more robust face detection, 
+# but they are fast and work well for simple applications. For more robust face detection, 
 # consider using deep learning-based methods.
 
-#dilib face detector is more accurate than haar cascade but haar cascade is faster than dlib face detector.
+# dilib face detector is more accurate than haar cascade but haar cascade is faster than dlib face detector.
 # It is less sensitive to noise and can detect faces at different scales and orientations.
