@@ -3,4 +3,4 @@ import os
 import cv2
 import numpy as np 
 
-people = ["Barack Obama", "Sundar Pichai", "Elon Musk", "Tom Cruise", "Michael Jackson"] 
+people = ["Barack Obama", "Sundar Pichai", "Elon Musk", "Tom Cruise", "Michael Jackson"] # Number of faces we will perform operations on
