@@ -1,0 +1,3 @@
+In this part we would be covering two important practicals parts in OpenCV
+:Face Detection with Haar Cascades
+:Face Recognition with OpenCV's built-in recognizer
