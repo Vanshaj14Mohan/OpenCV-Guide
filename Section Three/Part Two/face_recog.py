@@ -21,4 +21,7 @@ labels = []  # List to store all the labels corresponding to the faces
 def create_train():
     for person in people:
         path = os.path.join(DIR, person) # Path to each person's folder
-        
+        label = people.index(person) # Getting the index of the person in the people list to use as label
+
+        for img in os.listdir(path):
+            img_path = os.path.join(path, img) # Full path to the image
