@@ -4,5 +4,10 @@ import os
 import cv2
 import numpy as np 
 
-people = ["Barack Obama", "Sundar Pichai", "Elon Musk", "Tom Cruise", "Michael Jackson"] # Number of faces we will perform operations on 
+people = ["Barack Obama", "Elon Musk", "Michael Jackson" ,"Sundar Pichai","Tom Cruise"] # Number of faces we will perform operations on 
 
+p = []
+for i in os.listdir(r"E:\OpenCV Guide\Section Three\Part Two\Photos"): # Path where all the images are stored
+    p.append(i) # appending all the images present in the directory to the list p
+
+print(p) # Printing all the images present in the directory
