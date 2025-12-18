@@ -38,3 +38,8 @@ def create_train():
                 features.append(faces_roi) # Appending the face region to features list
                 labels.append(label) # Appending the corresponding label to labels list
 
+create_train()
+
+print("Training done ------------------")
+print(f"Length of features = {len(features)}")
+
