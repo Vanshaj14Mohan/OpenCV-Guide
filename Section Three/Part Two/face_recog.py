@@ -13,7 +13,7 @@ people = ["Barack Obama", "Elon Musk", "Michael Jackson" ,"Sundar Pichai","Tom C
 # print(p) # Printing all the images present in the directory
 
 # Now main method to load images and labels for training the recognizer
-DIR = r"E:\OpenCV Guide\Section Three\Part Two\Photos" # Directory where all the images are stored
+DIR = r"E:\OpenCV Guide\Section Three\Part Two\haar_face.xml" # Directory where all the images are stored
 
 haar_cascade = cv2.CascadeClassifier(r"E:\OpenCV Guide\Section Three\haar_face.xml")
 
@@ -41,5 +41,6 @@ def create_train():
 create_train()
 
 print("Training done ------------------")
-print(f"Length of features = {len(features)}")
+print(f"Length of the features = {len(features)}")
+print(f"Length of the labels = {len(labels)}")
 
