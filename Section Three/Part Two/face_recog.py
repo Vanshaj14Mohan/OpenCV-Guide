@@ -15,6 +15,8 @@ people = ["Barack Obama", "Elon Musk", "Michael Jackson" ,"Sundar Pichai","Tom C
 # Now main method to load images and labels for training the recognizer
 DIR = r"E:\OpenCV Guide\Section Three\Part Two\Photos" # Directory where all the images are stored
 
+haar_cascade = cv2.CascadeClassifier(r"E:\OpenCV Guide\Section Three\haar_face.xml")
+
 features = [] # List to store all the face features
 labels = []  # List to store all the labels corresponding to the faces
 
@@ -25,3 +27,14 @@ def create_train():
 
         for img in os.listdir(path):
             img_path = os.path.join(path, img) # Full path to the image
+
+            img_array = cv2.imread(img_path) # Reading the image
+            gray = cv2.cvtColor(img_array, cv2.COLOR_BGR2GRAY) # Converting the image to grayscale
+
+            face_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=4) # Detecting faces in the image
+
+            for (x,y,w,h) in face_rect:
+                faces_roi = gray[y:y+h, x:x+w] # Region of interest i.e the face area
+                features.append(faces_roi) # Appending the face region to features list
+                labels.append(label) # Appending the corresponding label to labels list
+
