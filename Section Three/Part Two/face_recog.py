@@ -40,7 +40,8 @@ def create_train():
 
 create_train()
 
-print("Training done ------------------")
-print(f"Length of the features = {len(features)}")
-print(f"Length of the labels = {len(labels)}")
+# Just to check if the training is done properly and the lengths of features and labels are same
+# print("Training done ------------------")
+# print(f"Length of the features = {len(features)}")
+# print(f"Length of the labels = {len(labels)}")
 
