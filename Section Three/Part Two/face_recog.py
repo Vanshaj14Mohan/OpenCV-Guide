@@ -40,8 +40,17 @@ def create_train():
 
 create_train()
 
+features = np.array(features, dtype='object') # Converting features list to numpy array, dtype='object' to handle arrays of different sizes
+labels = np.array(labels) # Converting labels list to numpy array
+
 # Just to check if the training is done properly and the lengths of features and labels are same
 # print("Training done ------------------")
 # print(f"Length of the features = {len(features)}")
 # print(f"Length of the labels = {len(labels)}")
+
+face_recognizer = cv2.face.LBPHFacerecognizer_create() # Creating the LBPH Face Recognizer,
+#LBPH = Local Binary Patterns Histograms, which is effective for face recognition tasks helps in recognizing faces under varying lighting conditions.
+
+# Now we will train the recognizer on the features and labels lists
+face_recognizer.train(features, labels) # Training the recognizer
 
