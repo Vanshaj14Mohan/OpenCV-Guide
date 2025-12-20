@@ -14,7 +14,8 @@ face_recognizer = cv2.face.LBPHFaceRecognizer_create() # Creating the LBPH Face 
 #LBPH = Local Binary Patterns Histograms, which is effective for face recognition tasks helps in recognizing faces under varying lighting conditions.
 face_recognizer.read("face_trained.yml") # Loading the trained model
 
-img = cv2.imread(r"E:\OpenCV Guide\Section Three\Part Two\Photos\Barack Obama\Barack Obama.jpg") # Reading the test image
+img = cv2.imread(r"E:\OpenCV Guide\Section Three\Part Two\Photos\Tom Cruise\tom-cruise 6.jpg") # Reading the test image
+# Once done we will test the recognizer on a new image
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) # Converting the image to grayscale
 cv2.imshow("Person", gray)
