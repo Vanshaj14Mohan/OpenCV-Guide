@@ -1,1 +1,1 @@
-## An OpenCV Into Guide:
+## An OpenCV Intro Guide:
