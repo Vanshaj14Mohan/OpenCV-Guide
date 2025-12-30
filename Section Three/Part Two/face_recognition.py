@@ -14,10 +14,11 @@ face_recognizer = cv2.face.LBPHFaceRecognizer_create() # Creating the LBPH Face 
 face_recognizer.read("face_trained.yml") # Loading the trained model
 
 img = cv2.imread(r"E:\OpenCV Guide\Section Three\Part Two\Photos\Tom Cruise\tom-cruise 6.jpg") # Reading the test image
+#Test Cases:
 #"E:\OpenCV Guide\Section Three\Part Two\Photos\Barack Obama\Barack Obama_4.jpg"
 #"E:\OpenCV Guide\Section Three\Part Two\Photos\Elon Musk\elon-musk 3.jpg"
 #"E:\OpenCV Guide\Section Three\Part Two\Photos\Michael Jackson\michael-jackson 3.jpg"
-#"E:\OpenCV Guide\Section Three\Part Two\Photos\Sundar Pichai\Sunar Pichai_Nine.jpg"
+#"E:\OpenCV Guide\Section Three\Part Two\Photos\Sundar Pichai\Sunar Pichai_Three.jpg"
 #"E:\OpenCV Guide\Section Three\Part Two\Photos\Tom Cruise\tom-cruise 6.jpg"
 # Once done we will test the recognizer on a new image
 
