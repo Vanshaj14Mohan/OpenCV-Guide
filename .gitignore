@@ -2,4 +2,5 @@ haar_face.xml
 face_trained.yml
 features.npy
 labels.npy
+simpsons_dataset
 
