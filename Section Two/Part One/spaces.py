@@ -25,7 +25,7 @@ cv2.imshow("Gray Image", gray)
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 cv2.imshow("HSV Image", hsv)
 
-#3: BGR to LAB (Lightness, A channel, B channel) l*a*b
+#3: BGR to LAB (Lightness, A red-green, B blue-yellow) l*a*b
 lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
 cv2.imshow("LAB Image", lab)
 
@@ -36,15 +36,15 @@ cv2.imshow("RGB Image", rgb)
 plt.imshow(rgb) # Since plt.imshow() expects the image in RGB format, we pass the rgb image here
 plt.show() # Would give result in RGB format
 
-#5: BGR to YUV (Y channel, U channel, V channel)
+#5: BGR to YUV YUV(Luminance, Chrominance U, Chrominance V)
 yuv = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
 cv2.imshow("YUV Image", yuv)
 
-#6: HSV to BGR
+#6: HSV to BGR 
 hsv_bgr = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
 cv2.imshow("HSV to BGR Image", hsv_bgr)
 
-#7: LAB to BGR
+#7: LAB to BGR LAB(Lightness, A red-green, B blue-yellow)
 lab_bgr = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
 cv2.imshow("LAB to BGR Image", lab_bgr)
 
